@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="JsCode/ValidFields.js"></script>
 </head>
 <body>
 
-<div class="name">Мориков Иван Дмитриевич P3117 №1708</div>
+<div class="name">
+    Мориков Иван Дмитриевич P32121(P3117) №1708
+    <img id="utka" src="vt_logo.png" width="100" height="100">
+</div>
 <p></p>
 <div class="chart exmpl">
     <img src="график%20Веб%20лаба1.png">
@@ -18,7 +22,7 @@
             <th>X &nbsp;</th>
             <th>
                 <form>
-                    <button name="x" value="-4" form="auth">-4</button>
+                    <button type="button" name="x" value="-4" form="auth">-4</button>
                 </form>
             </th>
             <th>
@@ -67,7 +71,7 @@
         <tr>
             <th>Y &nbsp;</th>
             <th>
-                <input type="number" name="y" form="auth"/>
+                <input type="number" name="y" form="auth" required/>
             </th>
 
         </tr>
@@ -75,11 +79,11 @@
     <table>
         <tr>
             <th>R &nbsp;</th>
-            <th><input type="checkbox" name="r" form="auth" value="1">1</th>
-            <th><input type="checkbox" name="r" form="auth" value="1.5">1.5</th>
-            <th><input type="checkbox" name="r" form="auth" value="2">2</th>
-            <th><input type="checkbox" name="r" form="auth" value="2.5">2.5</th>
-            <th><input type="checkbox" name="r" form="auth" value="3">3</th>
+            <th><input type="radio" required name="r" form="auth" value="1">1</th>
+            <th><input type="radio" required name="r" form="auth" value="1.5">1.5</th>
+            <th><input type="radio" required name="r" form="auth" value="2">2</th>
+            <th><input type="radio" required name="r" form="auth" value="2.5">2.5</th>
+            <th><input type="radio" required name="r" form="auth" value="3">3</th>
         </tr>
     </table>
     <table>
@@ -96,7 +100,7 @@
 <div class="table">
     <tr>
         <td>
-            <table border="1">
+            <table border="1" class="result-table">
                 <thead>
                 <td>X</td>
                 <td>Y</td>
@@ -105,9 +109,12 @@
                 <td>Current time</td>
                 <td>Computation time</td>
                 </thead>
+                <tbody id="table_out">
+                </tbody>
             </table>
         </td>
     </tr>
 </div>
+<script type="text/javascript" src="JsCode/addToTable.js"></script>
 </body>
 </html>

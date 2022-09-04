@@ -1,38 +1,64 @@
 * {
     font-family: serif;
     color: black;
-    /*background-color: #202124;*/
+    background-color: #FF66FF;
 }
+
 button:hover {
     cursor: pointer;
-    color: red;
+    color: green;
+    background-color: #faf7f7;
 }
+
 .name {
-    margin: 0px 650px;
+    margin: 0px 600px;
+    /*color: green;*/
 }
+
+#utka {
+    position: absolute;
+    left: 20px;
+    top: 10px;
+
+}
+
 .values {
-    margin: 50px 650px;
+    /*text-align: center;*/
+    margin: 50px 600px;
     height: 50px;
     width: 50px;
 }
+
 .table {
-    margin: 150px 650px;
+    margin: 150px 600px;
     height: 50px;
     width: 50px;
 }
+
 .chart {
-    margin: 25px 650px;
+    margin: 25px 600px;
     width: 200px;
     height: 200px;
     border: 5px solid #515151;
 }
+
 .exmpl {
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .exmpl img {
     height: 100%;
     width: auto;
 }
+
+/*input:invalid {*/
+/*    background-color: #ee4242;*/
+/*}*/
+
+input:valid {
+    background-color: #faf7f7;
+}
+
