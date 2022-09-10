@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Lab1</title>
     <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="JsCode/ValidFields.js"></script>
 </head>
 <body>
 
@@ -16,105 +15,108 @@
 <div class="chart exmpl">
     <img src="график%20Веб%20лаба1.png">
 </div>
-<div class="values">
+<div class="values" >
+    <form id="input-form" action="" method="GET">
     <table>
         <tr>
-            <th>X &nbsp;</th>
+            <th><label for="x-textinput">X:</label> &nbsp;</th>
+            <th><input type="text" id="x-textinput"  name="x" class="result" /><br />
+
+
+            </th>
             <th>
                 <form>
-                    <button type="button" name="x" value="-4" form="auth">-4</button>
+                    <button type="button" onclick="daivalue('-4')" value="-4" >-4</button>
                 </form>
             </th>
             <th>
                 <form>
-                    <button name="x" value="-3" form="auth">-3</button>
+                    <button type="button" onclick="daivalue('-3')" value="-3" >-3</button>
                 </form>
             </th>
             <th>
                 <form>
-                    <button name="x" value="-2" form="auth">-2</button>
+                    <button type="button" onclick="daivalue('-2')" value="-2" >-2</button>
                 </form>
             </th>
             <th>
                 <form>
-                    <button name="x" value="-1" form="auth">-1</button>
+                    <button type="button" onclick="daivalue('-1')" value="-1" >-1</button>
                 </form>
             </th>
             <th>
                 <form>
-                    <button name="x" value="0" form="auth">0</button>
+                    <button type="button" onclick="daivalue('0')" value="0" >0</button>
                 </form>
             </th>
             <th>
                 <form>
-                    <button name="x" value="1" form="auth">1</button>
+                    <button type="button" onclick="daivalue('1')" value="1" >1</button>
                 </form>
             </th>
             <th>
                 <form>
-                    <button name="x" value="2" form="auth">2</button>
+                    <button type="button" onclick="daivalue('2')" value="2" >2</button>
                 </form>
             </th>
             <th>
                 <form>
-                    <button name="x" value="3" form="auth">3</button>
+                    <button type="button" onclick="daivalue('3')" value="3" >3</button>
                 </form>
             </th>
             <th>
                 <form>
-                    <button name="x" value="4" form="auth">4</button>
+                    <button type="button" onclick="daivalue('4')" value="4" >4</button>
                 </form>
             </th>
         </tr>
     </table>
     <table>
         <tr>
-            <th>Y &nbsp;</th>
+            <th><label for="ybox-label"></label>Y: &nbsp;</th>
             <th>
-                <input type="number" name="y" form="auth" required/>
+                <input id = "ybox-label" type="number" name="y"  required/>
             </th>
 
         </tr>
     </table>
     <table>
         <tr>
-            <th>R &nbsp;</th>
-            <th><input type="radio" required name="r" form="auth" value="1">1</th>
-            <th><input type="radio" required name="r" form="auth" value="1.5">1.5</th>
-            <th><input type="radio" required name="r" form="auth" value="2">2</th>
-            <th><input type="radio" required name="r" form="auth" value="2.5">2.5</th>
-            <th><input type="radio" required name="r" form="auth" value="3">3</th>
+            <th> R: &nbsp;</th>
+            <th><label for="r-textinput1"></label><input id="r-textinput1" type="radio" required name="r" value="1">1</th>
+            <th><label for="r-textinput2"></label><input id="r-textinput2" type="radio" required name="r" value="1.5">1.5</th>
+            <th><label for="r-textinput3"></label><input id="r-textinput3" type="radio" required name="r" value="2">2</th>
+            <th><label for="r-textinput4"></label><input id="r-textinput4" type="radio" required name="r" value="2.5">2.5</th>
+            <th><label for="r-textinput5"></label><input id="r-textinput5" type="radio" required name="r" value="3">3</th>
         </tr>
     </table>
     <table>
         <tr>
             <th>Ввод параметров &nbsp;</th>
             <th>
-                <form id="auth" action="contact.php" method="GET">
-                    <button> ввод параметров</button>
-                </form>
+<!--                <form id="auth" action="contact.php" method="GET">-->
+                    <input class="button" type="submit" value="Submit">
+<!--                </form>-->
             </th>
         </tr>
     </table>
+    </form>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="JsCode/addToTable.js"></script>
+    <script type="text/javascript" src="JsCode/ButtonX.js"></script>
 </div>
-<div class="table">
-    <tr>
-        <td>
-            <table border="1" class="result-table">
-                <thead>
-                <td>X</td>
-                <td>Y</td>
-                <td>R</td>
-                <td>RESULT</td>
-                <td>Current time</td>
-                <td>Computation time</td>
-                </thead>
-                <tbody id="table_out">
-                </tbody>
-            </table>
-        </td>
-    </tr>
-</div>
-<script type="text/javascript" src="JsCode/addToTable.js"></script>
+
+<!--<div class="scroll-container">-->
+<!--    <table id="result-tablew">-->
+<!--        <tr class="table-header">-->
+<!--            <th class="coords-col">X</th>-->
+<!--            <th class="coords-col">Y</th>-->
+<!--            <th class="coords-col">R</th>-->
+<!--            <th class="time-col">Current time</th>-->
+<!--            <th class="time-col">Execution time</th>-->
+<!--            <th class="hitres-col">Hit result</th>-->
+<!--        </tr>-->
+<!--    </table>-->
+<!--</div>-->
 </body>
 </html>

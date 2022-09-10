@@ -4,7 +4,7 @@ $x = "не определено";
 $y = "не определено";
 $r = "не определено";
 $inputValid = true;
-$out = " ";
+$out = true;
 
 if (isset($_GET["x"])) {
 
@@ -47,15 +47,38 @@ if (is_numeric($x) && is_numeric($y) && is_numeric($r)) {
     if ((($x * $x + $y * $y) <= $r * $r && $x >= 0 && $y <= 0) ||
         ($y + 2 * $x <= $r && $x <= 0 && $y >= 0) ||
         ($y >= (-$x / 2 - $r / 2) && $x >= 0 && $y >= 0)) {
-        $out = "Входит";
+//        $out = true;
     } else {
-        $out = "Не входит";
+        $out = false;
     }
 } else {
-    $out = "Не входит";
+    $out = false;
 }
 
-echo "X: $x <br> Y: $y <br> R: $r <br> valid Data: ", var_export($inputValid),
-"<br> out: $out ",
-"<br> Время выполнения скрипта: ", microtime() - $start_time;
-echo "<br> Текущее время: ", date(DATE_RFC822);
+//echo "X: $x <br> Y: $y <br> R: $r <br> valid Data: ", var_export($inputValid),
+//"<br> out: $out ",
+//"<br> Время выполнения скрипта: ", microtime() - $start_time;
+//echo "<br> Текущее время: ", date(DATE_RFC822);
+$time_script = microtime() - $start_time;
+$curtime = date(DATE_RFC822);
+$input = $inputValid ? 'true' : 'false';
+$outw = $out ? 'true' : 'false';
+
+//echo "<table border =\"1\">";
+//    echo "<tr>";
+//    echo "<td>$x</td><td>$y</td><td>$r</td><td>$input</td><td>$out</td><td>$time_script</td><td>$date</td>";
+//    echo "</tr>";
+//echo "</table>";
+
+$jsonData = '{' .
+    "\"validate\":$input," .
+    "\"x\":\"$x\"," .
+    "\"y\":\"$y\"," .
+    "\"r\":\"$r\"," .
+    "\"curtime\":\"$curtime\"," .
+    "\"exectime\":\"$time_script\"," .
+    "\"hitres\":$outw" .
+    "}";
+
+echo $jsonData;
+
