@@ -63,7 +63,7 @@ $time_script = microtime() - $start_time;
 $curtime = date(DATE_RFC822);
 $input = $inputValid ? 'true' : 'false';
 $outw = $out ? 'true' : 'false';
-
+//$time_script = number_format($time_script, 3, '.', '');
 //echo "<table border =\"1\">";
 //    echo "<tr>";
 //    echo "<td>$x</td><td>$y</td><td>$r</td><td>$input</td><td>$out</td><td>$time_script</td><td>$date</td>";

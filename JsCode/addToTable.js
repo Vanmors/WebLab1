@@ -1,6 +1,6 @@
 function resetPreviousData(){
     if (localStorage.getItem("attempts") !== null) {
-        let attempts = localStorage['attempts'].split('|');
+        var attempts = localStorage['attempts'].split('|');
         attempts.forEach(element => {
             if(element !== "" && element !== null) {
                 $('#result-table').append(element);
@@ -69,9 +69,10 @@ $(function() {
                 },
                 success: function(data) {
                     $('.button').attr('disabled', false);
+                    console.log(data);
                     if (data.validate) {
-
-                        newRow = `<tr>
+                        console.log(data);
+                        let newRow = `<tr>
               <td class="table-text">${data.x}</td>
               <td class="table-text">${data.y}</td>
               <td class="table-text">${data.r}</td>
@@ -79,8 +80,13 @@ $(function() {
               <td class="table-text">${data.exectime}</td>
               <td class="${(data.hitres) ? "hit-text":"miss-text"}">${data.hitres}</td>
               </tr>`;
-
+                        console.log(newRow);
                         $('#result-table').append(newRow);
+                        // let table = document.getElementById("result-table");
+                        // let newRow = document.createElement("tr");
+                        // newRow.innerHTML = '<td class="table-text">${data.x}</td> <td class="table-text">${data.y}</td> <td class="table-text">${data.r}</td> <td class="table-text">${data.curtime}</td> <td class="table-text">${data.exectime}</td> <td class="${(data.hitres) ? "hit-text":"miss-text"}">${data.hitres}</td>';
+                        // table.append(newRow);
+
 
                         if (localStorage.getItem("attempts") !== null) {
                             localStorage['attempts'] += "|" + newRow;
