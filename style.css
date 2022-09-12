@@ -1,8 +1,9 @@
 * {
     font-family: serif;
-    color: black;
-    background-color: #FF66FF;
-    /*background-color: #373737;*/
+    color: #ffe8e8;
+    /*color: ;*/
+    /*background-color: #FF66FF;*/
+    background-color: #1f1f1f;
 }
 
 button:hover {
@@ -12,6 +13,7 @@ button:hover {
 }
 
 .name {
+    font-family: ‘Raleway’,sans-serif;
     margin: 0px 600px;
     /*color: green;*/
 }
@@ -61,6 +63,6 @@ button:hover {
 /*}*/
 
 input:valid {
-    background-color: #faf7f7;
+    /*background-color: #faf7f7;*/
 }
 
