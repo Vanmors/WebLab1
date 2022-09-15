@@ -43,6 +43,7 @@ if ($y < -5 || $y > 5) {
 if ($r < 1 || $r > 3) {
     $inputValid = false;
 }
+
 if (is_numeric($x) && is_numeric($y) && is_numeric($r)) {
     if ((($x * $x + $y * $y) <= $r * $r && $x >= 0 && $y <= 0) ||
         ($y + 2 * $x <= $r && $x <= 0 && $y >= 0) ||
@@ -59,12 +60,13 @@ if (is_numeric($x) && is_numeric($y) && is_numeric($r)) {
 //"<br> out: $out ",
 //"<br> Время выполнения скрипта: ", microtime() - $start_time;
 //echo "<br> Текущее время: ", date(DATE_RFC822);
+
 $time_script = microtime() - $start_time;
 $curtime = date(DATE_RFC822);
 $input = $inputValid ? 'true' : 'false';
 $outw = $out ? 'true' : 'false';
-//$time_script = number_format($time_script, 3, '.', '');
 $time_script = round($time_script, 7);
+
 //echo "<table border =\"1\">";
 //    echo "<tr>";
 //    echo "<td>$x</td><td>$y</td><td>$r</td><td>$input</td><td>$out</td><td>$time_script</td><td>$date</td>";

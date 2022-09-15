@@ -14,15 +14,15 @@ $(function() {
         // function isNumeric(n) {
         //     return !isNaN(parseFloat(n)) && isFinite(n);
         // }
-
-        // function validateX() {
-        //     const X_MIN = -3;
-        //     const X_MAX = +5;
-        //     let xField = $('#x-textinput');
-        //     let numX = xField.val().trim().replace(',','.');
         //
-        //     xField.val(numX);
-        //     if(isNumeric(numX) && numX > X_MIN && numX < X_MAX) {
+        // function validateY() {
+        //     const Y_MIN = -5;
+        //     const Y_MAX = +5;
+        //     let xField = $('#y-textinput');
+        //     let numY = xField.val().trim().replace(',','.');
+        //
+        //     xField.val(numY);
+        //     if(isNumeric(numY) && numY > Y_MIN && numY < Y_MAX) {
         //         xField.removeClass('text-error');
         //         return true;
         //     } else {
@@ -30,24 +30,24 @@ $(function() {
         //         return false;
         //     }
         // }
-        // function validateY() {
-        //     if ($('.y-radio').is(':checked')) {
-        //         $('.ybox-label').removeClass('box-error');
+        // function validateR() {
+        //     if ($('.r-radio').is(':checked')) {
+        //         $('.rbox-label').removeClass('box-error');
         //         return true;
         //     } else {
-        //         $('.ybox-label').addClass('box-error');
+        //         $('.rbox-label').addClass('box-error');
         //         return false;
         //     }
         // }
-        // function validateR() {
-        //     const R_VALUES = ["1","2","3","4","5","6"];
-        //     let rButtonLabel = $('#r-textinput');
-        //     let numR = rButtonLabel.val().replace(',', '.');
-        //     if(isNumeric(numR) && numR in R_VALUES){
-        //         rButtonLabel.removeClass('text-error');
+        // function validateX() {
+        //     const X_VALUES = ["-4","-3","-2","-1","0","1","2","3","4"];
+        //     let xButtonLabel = $('#x-textinput');
+        //     let numX = xButtonLabel.val().replace(',', '.');
+        //     if(isNumeric(numX) && numX in X_VALUES){
+        //         xButtonLabel.removeClass('text-error');
         //         return true;
         //     } else {
-        //         rButtonLabel.addClass('text-error');
+        //         xButtonLabel.addClass('text-error');
         //         return false;
         //     }
         // }
@@ -82,11 +82,6 @@ $(function() {
               </tr>`;
                         console.log(newRow);
                         $('#result-table').append(newRow);
-                        // let table = document.getElementById("result-table");
-                        // let newRow = document.createElement("tr");
-                        // newRow.innerHTML = '<td class="table-text">${data.x}</td> <td class="table-text">${data.y}</td> <td class="table-text">${data.r}</td> <td class="table-text">${data.curtime}</td> <td class="table-text">${data.exectime}</td> <td class="${(data.hitres) ? "hit-text":"miss-text"}">${data.hitres}</td>';
-                        // table.append(newRow);
-
 
                         if (localStorage.getItem("attempts") !== null) {
                             localStorage['attempts'] += "|" + newRow;

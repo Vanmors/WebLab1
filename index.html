@@ -20,7 +20,7 @@
     <table>
         <tr>
             <th><label for="x-textinput">X:</label> &nbsp;</th>
-            <th><input type="number" id="x-textinput"  name="x" class="result" required width="10px" height="10px"/><br />
+            <th><input type="number" id="x-textinput"  name="x" class="result" required /><br />
 
 
             </th>
@@ -73,9 +73,9 @@
     </table>
     <table>
         <tr>
-            <th><label for="ybox-label"></label>Y: &nbsp;</th>
+            <th><label for="y-textinput"></label>Y: &nbsp;</th>
             <th>
-                <input id = "ybox-label" type="number" name="y"  required/>
+                <input id = "y-textinput" type="number" name="y"  required  step="any"/>
             </th>
 
         </tr>
@@ -83,21 +83,31 @@
     <table>
         <tr>
             <th> R: &nbsp;</th>
-            <th><label for="r-textinput1"></label><input id="r-textinput1" type="radio" required name="r" value="1">1</th>
-            <th><label for="r-textinput2"></label><input id="r-textinput2" type="radio" required name="r" value="1.5">1.5</th>
-            <th><label for="r-textinput3"></label><input id="r-textinput3" type="radio" required name="r" value="2">2</th>
-            <th><label for="r-textinput4"></label><input id="r-textinput4" type="radio" required name="r" value="2.5">2.5</th>
-            <th><label for="r-textinput5"></label><input id="r-textinput5" type="radio" required name="r" value="3">3</th>
+            <th><label class="rbox-label" for="rbox-label1"></label>
+                <input class="r-radio" id="rbox-label1" type="radio" required name="r" value="1">1</th>
+            <th><label class="rbox-label" for="rbox-label2"></label>
+                <input class="r-radio" id="rbox-label2" type="radio" required name="r" value="1.5">1.5</th>
+            <th><label class="rbox-label" for="rbox-label3"></label>
+                <input class="r-radio" id="rbox-label3" type="radio" required name="r" value="2">2</th>
+            <th><label class="rbox-label" for="rbox-label4"></label>
+                <input class="r-radio" id="rbox-label4" type="radio" required name="r" value="2.5">2.5</th>
+            <th><label class="rbox-label" for="rbox-label5"></label>
+                <input class="r-radio" id="rbox-label5" type="radio" required name="r" value="3">3</th>
         </tr>
     </table>
     <table>
         <tr>
-            <th>Ввод параметров &nbsp;</th>
+            <th>Ввод параметров: &nbsp;</th>
             <th>
 <!--                <form id="auth" action="contact.php" method="GET">-->
                     <input class="button" type="submit" value="Submit">
-                    <input class="button" type="reset" value="Reset">
 <!--                </form>-->
+            </th>
+        </tr>
+        <tr>
+            <th>Сброс параметров: &nbsp;</th>
+            <th>
+                <input class="button" type="reset" value="Reset">
             </th>
         </tr>
     </table>

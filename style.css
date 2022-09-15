@@ -12,10 +12,19 @@ button:hover {
     background-color: #faf7f7;
 }
 
+.button:hover{
+
+}
+
 .name {
-    font-family: ‘Raleway’,sans-serif;
-    margin: 0px 600px;
+    font-family: serif;
+    margin: 0px 550px;
     /*color: green;*/
+    background: linear-gradient(to right, red, orange, yellow, green, cyan, blue, violet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 30px;
+    /*line-height: 40px;*/
 }
 
 #utka {
@@ -65,4 +74,35 @@ button:hover {
 input:valid {
     /*background-color: #faf7f7;*/
 }
+
+/*:root{*/
+/*    --error-color: #f54c45;*/
+/*}*/
+
+
+/*#x-textinput{*/
+/*    width: 30px;*/
+/*}*/
+
+/*#x-textinput.text-error {*/
+/*    color: var(--error-color);*/
+/*}*/
+
+/*#r-textinput.text-error {*/
+/*    color: var(--error-color);*/
+/*}*/
+
+
+/*.text-error {*/
+/*    !*border: 1px solid --error-color;*!*/
+/*    color: var(--error-color);*/
+/*}*/
+
+/*.box-error {*/
+/*    color: var(--error-color);*/
+/*}*/
+
+/*.text-error::placeholder {*/
+/*    color: var(--error-color);*/
+/*}*/
 
