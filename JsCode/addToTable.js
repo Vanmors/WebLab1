@@ -11,49 +11,6 @@ function resetPreviousData(){
 
 $(function() {
 
-        // function isNumeric(n) {
-        //     return !isNaN(parseFloat(n)) && isFinite(n);
-        // }
-        //
-        // function validateY() {
-        //     const Y_MIN = -5;
-        //     const Y_MAX = +5;
-        //     let xField = $('#y-textinput');
-        //     let numY = xField.val().trim().replace(',','.');
-        //
-        //     xField.val(numY);
-        //     if(isNumeric(numY) && numY > Y_MIN && numY < Y_MAX) {
-        //         xField.removeClass('text-error');
-        //         return true;
-        //     } else {
-        //         xField.addClass('text-error');
-        //         return false;
-        //     }
-        // }
-        // function validateR() {
-        //     if ($('.r-radio').is(':checked')) {
-        //         $('.rbox-label').removeClass('box-error');
-        //         return true;
-        //     } else {
-        //         $('.rbox-label').addClass('box-error');
-        //         return false;
-        //     }
-        // }
-        // function validateX() {
-        //     const X_VALUES = ["-4","-3","-2","-1","0","1","2","3","4"];
-        //     let xButtonLabel = $('#x-textinput');
-        //     let numX = xButtonLabel.val().replace(',', '.');
-        //     if(isNumeric(numX) && numX in X_VALUES){
-        //         xButtonLabel.removeClass('text-error');
-        //         return true;
-        //     } else {
-        //         xButtonLabel.addClass('text-error');
-        //         return false;
-        //     }
-        // }
-        // function validateForm() {
-        //     return validateX() & validateY() & validateR();
-        // }
 
         $('#input-form').on('submit', function(event) {
             event.preventDefault();
